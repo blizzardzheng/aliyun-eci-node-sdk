@@ -1,7 +1,7 @@
 {
   "name": "aliyun-eci-node-sdk",
   "version": "0.1.0",
-  "description": "",
+  "description": "aliyun-eci-node-sdk",
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsc lib/** -outDir dist --watch",
