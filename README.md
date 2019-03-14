@@ -1,11 +1,13 @@
 # ECI Node SDK 使用示例
+Eci 的 node SDK，基于上层封装 eci 特性api typings 申明 [aliyun-sdk-node-request](https://github.com/blizzardzheng/aliyun-nodesdk-common-request)
+
 
 ### 安装
 ```
 npm install aliyun-eci-node-sdk --save
 ```
 
-### ts
+### ts & typings
 使用 vscode 引入，所有的参数都有智能提示
 
 ### 创建 Client
