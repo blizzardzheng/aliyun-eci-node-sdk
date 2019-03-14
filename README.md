@@ -5,6 +5,9 @@
 npm install aliyun-eci-node-sdk --save
 ```
 
+### ts
+使用 vscode 引入，所有的参数都有智能提示
+
 ### 创建 Client
 
 #### 接口参数

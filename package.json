@@ -5,12 +5,12 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsc lib/** -outDir dist --watch",
-    "build": "rm dist/** && tsc lib/** -outDir dist",
+    "build": "tsc -p tsconfig.json",
     "test": "mocha -r ts-node/register ./tests/*.test.ts",
     "prepublish": "npm run build"
   },
   "author": "candy.zhengxq@gmail.com",
-  "typings": "./index.d.ts",
+  "typings": "./typings/index.d.ts",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^11.11.3",

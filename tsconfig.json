@@ -3,6 +3,8 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "commonjs",
+    "outDir": "dist",
+    "rootDir": "lib",
     "noImplicitAny": false,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
@@ -18,8 +20,12 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "inlineSourceMap": true,
+    "declaration": true,
     "importHelpers": true,
+    "declarationDir": "typings",
     "types": ["node"]
-  }
+  },
+  "files": [
+    "lib/index.ts"
+  ]
 }
