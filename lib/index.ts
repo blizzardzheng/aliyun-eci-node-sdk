@@ -8,16 +8,17 @@ export interface ClientDO {
 }
 
 export interface CreateContainerGroupRequestDO {
+  RegionId?: string; // 实例所属的地域 ID
   SecurityGroupId: string; // 安全组 ID
   VSwitchId: string; // 虚机交换机 ID
   ContainerGroupName: string; // 实例名称，不要求唯一。长度为[2, 128]个英文小写字母、数字或者连字符（-）。不能以连接字符开始或结尾
-  InitContainers?: Array<any>; // 初始化容器列表
+  InitContainer?: Array<any>; // 初始化容器列表
   Container: Array<any>; // 容器列表
   ZoneId?: string; // 实例所属的可用区编号，空表示由系统选择，默认值：空
   RestartPolicy?: string; // 实例重启策略，默认：Always
-  Tags?: Array<any>;// 容器标签
-  ImageRegistryCredentials?: Array<any>;// 镜像仓库登录信息
-  Volumes?: Array<any>; // 数据卷列表
+  Tag?: Array<any>;// 容器标签
+  ImageRegistryCredential?: Array<any>;// 镜像仓库登录信息
+  Volume?: Array<any>; // 数据卷列表
   EipInstanceId?: Array<string>;// 弹性IP ID
   DnsConfig?: any;// Dns 配置
   Cpu?: string; //CPU 大小
