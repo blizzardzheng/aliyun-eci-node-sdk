@@ -1,6 +1,6 @@
 {
   "name": "aliyun-eci-node-sdk",
-  "version": "0.1.0",
+  "version": "0.2.2",
   "description": "aliyun-eci-node-sdk",
   "main": "dist/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^11.11.3",
-    "aliyun-sdk-node-request": "^0.0.3",
+    "aliyun-sdk-node-request": "^0.2.0",
     "dotenv": "^7.0.0",
     "encode-3986": "^1.0.0",
     "flat": "^4.1.0",

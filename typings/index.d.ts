@@ -5,16 +5,17 @@ export interface ClientDO {
     Version?: string;
 }
 export interface CreateContainerGroupRequestDO {
+    RegionId?: string;
     SecurityGroupId: string;
     VSwitchId: string;
     ContainerGroupName: string;
-    InitContainers?: Array<any>;
+    InitContainer?: Array<any>;
     Container: Array<any>;
     ZoneId?: string;
     RestartPolicy?: string;
-    Tags?: Array<any>;
-    ImageRegistryCredentials?: Array<any>;
-    Volumes?: Array<any>;
+    Tag?: Array<any>;
+    ImageRegistryCredential?: Array<any>;
+    Volume?: Array<any>;
     EipInstanceId?: Array<string>;
     DnsConfig?: any;
     Cpu?: string;
@@ -37,9 +38,9 @@ export interface DescribeContainerGroupsDO {
     ContainerGroupIds?: string;
     ContainerGroupName?: string;
     Status?: string;
-    Tags?: Array<string>;
-    NextToken: string;
-    Limit: number;
+    Tag?: Array<any>;
+    NextToken?: string;
+    Limit?: number;
 }
 export interface DescribeContainerLogDO {
     ContainerGroupId: string;

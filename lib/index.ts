@@ -42,9 +42,9 @@ export interface DescribeContainerGroupsDO {
   ContainerGroupIds?: string;
   ContainerGroupName?: string;
   Status?: string;
-  Tags?: Array<string>;
-  NextToken: string;
-  Limit: number;
+  Tag?: Array<any>;
+  NextToken?: string;
+  Limit?: number;
 }
 
 export interface DescribeContainerLogDO {
