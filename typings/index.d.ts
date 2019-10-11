@@ -49,6 +49,17 @@ export interface DescribeContainerLogDO {
     Tail?: string;
     StartTime?: string;
 }
+export interface UpdateContainerGroupDO {
+    ContainerGroupId: string;
+    Cpu?: string;
+    Memory?: string;
+    ImageRegistryCredential?: Array<any>;
+    Volume?: Array<any>;
+    RestartPolicy?: string;
+    InitContainer?: Array<any>;
+    Container?: Array<any>;
+    Tag?: Array<any>;
+}
 declare class Client {
     private AccessKeyId;
     private AccessKeySecret;
@@ -60,5 +71,6 @@ declare class Client {
     execContainerCommand(option: ExecContainerCommandDO): any;
     describeContainerGroups(option: DescribeContainerGroupsDO): any;
     describeContainerLog(option: DescribeContainerLogDO): any;
+    updateContainerGroup(option: UpdateContainerGroupDO): any;
 }
 export default Client;

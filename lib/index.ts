@@ -55,6 +55,18 @@ export interface DescribeContainerLogDO {
   StartTime?: string; // UTC时间，RFC3339标准，例如：2018-08-02T15:00:00Z
 }
 
+export interface UpdateContainerGroupDO {
+  ContainerGroupId: string; // ECI实例ID 不能变
+  Cpu?: string;
+  Memory?: string;
+  ImageRegistryCredential?: Array<any>;// 镜像仓库登录信息
+  Volume?: Array<any>; // 数据卷列表
+  RestartPolicy?: string; // 实例重启策略，默认：Always
+  InitContainer?: Array<any>; // 初始化容器列表
+  Container?: Array<any>; // 容器列表
+  Tag?: Array<any>;// 容器标签
+}
+
 class Client {
   private AccessKeyId;
   private AccessKeySecret;
@@ -97,6 +109,12 @@ class Client {
   }
   describeContainerLog(option: DescribeContainerLogDO) {
     return this.request.invoke('DescribeContainerLog', {
+      RegionId: this.RegionId,
+      ...option
+    });
+  }
+  updateContainerGroup(option: UpdateContainerGroupDO) {
+    return this.request.invoke('UpdateContainerGroup', {
       RegionId: this.RegionId,
       ...option
     });

@@ -28,5 +28,8 @@ class Client {
     describeContainerLog(option) {
         return this.request.invoke('DescribeContainerLog', Object.assign({ RegionId: this.RegionId }, option));
     }
+    updateContainerGroup(option) {
+        return this.request.invoke('UpdateContainerGroup', Object.assign({ RegionId: this.RegionId }, option));
+    }
 }
 exports.default = Client;
